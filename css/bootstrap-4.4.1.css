@@ -10267,6 +10267,93 @@ a.text-dark:hover, a.text-dark:focus {
 	transform: scale(0.5) rotate(-360deg);
 }
 	
-
-
+.box4 {
+  position: relative;
+  overflow: hidden;
+}
+.box4:before {
+  content: "";
+  width: 0;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: -250px;
+  bottom: 0;
+  transform: skewX(-36deg);
+  transition: all 0.5s ease 0s;
+  z-index: 1;
+}
+.box4:hover:before {
+  width: 200%;
+}
+.box4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.box4 .box-content {
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+.box4:hover .box-content {
+  transform: scale(1);
+}
+.box4 .title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.box4 .post {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.box4 .icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.box4 .icon li {
+  display: inline-block;
+}
+.box4 .icon li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  background: #fff;
+  color: #0f9f74;
+  margin-right: 10px;
+  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+}
+.box4 .icon li a:hover {
+  background: #0f9f74;
+  color: #fff;
+}
+@media only screen and (max-width: 990px) {
+  .box4 {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .box4:before {
+    left: -400px;
+  }
+  .box4:hover:before {
+    width: 300%;
+  }
+}
 /*# sourceMappingURL=bootstrap.css.map */
